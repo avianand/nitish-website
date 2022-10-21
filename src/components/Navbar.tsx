@@ -19,7 +19,7 @@ export default function Example() {
     <div className="relative">
       <Disclosure
         as="nav"
-        className="bg-transparent absolute top-0 z-10 w-full"
+        className="md:bg-transparent absolute top-0 z-10 w-full"
       >
         {({ open }) => (
           <>
@@ -145,8 +145,8 @@ export default function Example() {
                 </div>
               </div>
             </div>
-
-            <Disclosure.Panel className="sm:hidden">
+            {/* mobile menu */}
+            <Disclosure.Panel className="sm:hidden bg-black shadow-2xl drop-shadow-2xl pb-6 transition-all">
               <div className="space-y-1 px-2 pt-2 pb-3">
                 {navigation.map((item) => (
                   <Disclosure.Button
