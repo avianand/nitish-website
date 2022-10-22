@@ -1,9 +1,18 @@
 import header from "../assets/images/header.jpg";
 import Footer from "../components/Footer";
+import { ReactComponent as Birds } from "../assets/images/birds.svg";
+import { ReactComponent as Landscape } from "../assets/images/landscape.svg";
+import { ReactComponent as Nightscape } from "../assets/images/nightscape.svg";
+import { ReactComponent as Merchandise } from "../assets/images/merchandise.svg";
+import { ReactComponent as Travel } from "../assets/images/travel.svg";
+import { ReactComponent as Print } from "../assets/images/print.svg";
 
 type Props = {};
 
 const Home = (props: Props) => {
+  const handleForm = (event: any)=> {
+    event.preventDefault();
+  }
   return (
     <div className="text-black text-base">
       <header className="relative">
@@ -20,16 +29,16 @@ const Home = (props: Props) => {
       <section className="">
         <header className="my-6 text-lg font-bold">Categories</header>
         <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+            <Travel className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">Travel</span>
           </div>
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+            <Print className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">Print</span>
           </div>
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+            <Merchandise className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">
               Merchandise (coming soon)
             </span>
@@ -39,16 +48,16 @@ const Home = (props: Props) => {
       <section className="">
         <header className="my-6 text-lg font-bold">Gallery</header>
         <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+            <Birds className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">Birds</span>
           </div>
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+          <Landscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">Landscape</span>
           </div>
-          <div className="border-2 rounded-lg grid">
-            <img className="w-full h-60 rounded-xl" src="" alt="" />
+          <div className="border-2 rounded-lg grid shadow-md">
+          <Nightscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
             <span className="text-base font-bold my-2">Nightscape</span>
           </div>
         </div>
@@ -56,7 +65,7 @@ const Home = (props: Props) => {
       <section className="mb-20">
         <header className="my-4 text-xl font-semibold">Contact me</header>
         <div>
-          <form action="post">
+          <form action="post" onSubmit={handleForm}>
             <div className="m-4">
               <input
                 className="border-2 rounded w-full md:w-96 p-4 "
@@ -87,7 +96,7 @@ const Home = (props: Props) => {
             <div className="m-4">
               <button
                 type="submit"
-                className="p-4 bg-black rounded text-white md:w-96 w-full"
+                className="p-4 bg-primary shadow-xl focus:shadow-none active:shadow-none rounded text-white md:w-96 w-full"
               >
                 Submit
               </button>
