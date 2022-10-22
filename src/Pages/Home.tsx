@@ -1,44 +1,48 @@
-import header from "../assets/images/header.jpg";
-import Footer from "../components/Footer";
 import { ReactComponent as Birds } from "../assets/images/birds.svg";
+import header from "../assets/images/header.jpg";
 import { ReactComponent as Landscape } from "../assets/images/landscape.svg";
-import { ReactComponent as Nightscape } from "../assets/images/nightscape.svg";
 import { ReactComponent as Merchandise } from "../assets/images/merchandise.svg";
-import { ReactComponent as Travel } from "../assets/images/travel.svg";
+import { ReactComponent as Nightscape } from "../assets/images/nightscape.svg";
 import { ReactComponent as Print } from "../assets/images/print.svg";
+import { ReactComponent as Travel } from "../assets/images/travel.svg";
+import Footer from "../components/Footer";
 
 type Props = {};
 
 const Home = (props: Props) => {
-  const handleForm = (event: any)=> {
+  const handleForm = (event: any) => {
     event.preventDefault();
-  }
+  };
   return (
     <div className="text-black text-base">
       <header className="relative">
-        <span className="absolute font-bold text-white text-2xl top-[40%] md:text-7xl left-0 md:top-[30%] ml-2 md:ml-20">
+        <span className="absolute font-bold text-white text-2xl top-[40%] md:text-5xl left-0 md:top-[40%] ml-2 md:ml-20">
           The Last <br />{" "}
-          <span className="text-4xl md:text-9xl opacity-75 animate-pulse">
-            Vultures
+          <span className="text-4xl md:text-7xl opacity-75 animate-pulse">
+            Vulture
           </span>
         </span>
         <div>
-          <img src={header} alt="header" className="w-full object-cover" />
+          <img
+            src={header}
+            alt="header"
+            className="w-full md:h-[800px] object-cover"
+          />
         </div>
       </header>
       <section className="">
         <header className="my-6 text-lg font-bold">Categories</header>
         <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
           <div className="border-2 rounded-lg grid shadow-md">
-            <Travel className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Travel className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">Travel</span>
           </div>
           <div className="border-2 rounded-lg grid shadow-md">
-            <Print className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Print className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">Print</span>
           </div>
           <div className="border-2 rounded-lg grid shadow-md">
-            <Merchandise className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Merchandise className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">
               Merchandise (coming soon)
             </span>
@@ -49,15 +53,15 @@ const Home = (props: Props) => {
         <header className="my-6 text-lg font-bold">Gallery</header>
         <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
           <div className="border-2 rounded-lg grid shadow-md">
-            <Birds className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Birds className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">Birds</span>
           </div>
           <div className="border-2 rounded-lg grid shadow-md">
-          <Landscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Landscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">Landscape</span>
           </div>
           <div className="border-2 rounded-lg grid shadow-md">
-          <Nightscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200"/>
+            <Nightscape className="w-full h-60 rounded-t-lg text-primary fill-current bg-slate-200" />
             <span className="text-base font-bold my-2">Nightscape</span>
           </div>
         </div>
@@ -104,7 +108,9 @@ const Home = (props: Props) => {
           </form>
         </div>
       </section>
-      <footer><Footer/></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
