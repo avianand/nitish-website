@@ -4,8 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#755637"
-      }
+        primary: "#090A10",
+        secondary: "#848EA0",
+        tertiary: "#303340",
+        quaternary: "#9DA993",
+        inverted: "#ffffff",
+      },
+    },
+    fontFamily: {
+      primary: "Plus Jakarta Sans, sans-serif",
     },
   },
   plugins: [],

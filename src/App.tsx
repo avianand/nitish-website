@@ -2,9 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import About from "./Pages/About";
+import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
+import Tours from "./Pages/Tours";
 
 const router = createBrowserRouter([
   {
@@ -16,12 +18,20 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "",
+        path: "/",
         element: <Home />,
       },
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "tours",
+        element: <Tours />,
       },
       {
         path: "contact",
@@ -43,7 +53,7 @@ const router = createBrowserRouter([
       //   element: <AuthLayout />,
       //   children: [
       //     {
-      //       path: "login",
+      //       path: "admin-nitish",
       //       element: <Login />,
       //       loader: redirectIfUser,
       //     },
@@ -58,7 +68,7 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    <div className="App relative">
+    <div className="App relative font-primary">
       <RouterProvider router={router} />
     </div>
   );
