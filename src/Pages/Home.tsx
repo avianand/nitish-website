@@ -93,9 +93,6 @@ const Home = (props: Props) => {
       <section className="mb-20">
         <Contact />
       </section>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 };
