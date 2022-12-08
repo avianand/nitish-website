@@ -1,3 +1,5 @@
+import Social from "../components/Social";
+
 type Props = {};
 
 const Contact = (props: Props) => {
@@ -6,7 +8,7 @@ const Contact = (props: Props) => {
   };
 
   return (
-    <div className="text-black">
+    <div className="text-black text-base mb-20 flex flex-col items-center">
       <h1 className="font-bold text-2xl mt-10 mb-6">Contact us</h1>
       <form action="post" onSubmit={handleForm}>
         <div className="m-4">
@@ -45,6 +47,10 @@ const Contact = (props: Props) => {
           </button>
         </div>
       </form>
+
+      <div className="my-10 px-20 py-4 bg-tertiary max-w-max flex items-center w-full justify-center">
+        <Social />
+      </div>
     </div>
   );
 };

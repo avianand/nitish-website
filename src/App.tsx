@@ -1,5 +1,6 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
@@ -14,6 +15,8 @@ const router = createBrowserRouter([
     element: (
       <header className="App-header absolute top-0 z-10 w-full">
         <Navbar />
+
+        <Footer />
       </header>
     ),
     children: [
