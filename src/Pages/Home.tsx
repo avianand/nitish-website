@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
+import About from "../assets/images/About_me.jpg";
 import { ReactComponent as Birds } from "../assets/images/birds.svg";
+import Explore from "../assets/images/Explore.jpg";
+import Gallery from "../assets/images/Gallery.jpg";
 import header from "../assets/images/header2.jpg";
-import { ReactComponent as Landscape } from "../assets/images/landscape.svg";
-import { ReactComponent as Merchandise } from "../assets/images/merchandise.svg";
-import { ReactComponent as Nightscape } from "../assets/images/nightscape.svg";
-import { ReactComponent as Print } from "../assets/images/print.svg";
-import { ReactComponent as Travel } from "../assets/images/travel.svg";
+import Prints from "../assets/images/Prints.jpg";
+import The_Last_Vulture from "../assets/images/The_Last_Vulture.jpg";
 import Footer from "../components/Footer";
 import Contact from "./Contact";
 
@@ -34,31 +34,30 @@ const Home = (props: Props) => {
       </header>
       <section className="pb-6 bg-secondary bg-opacity-5">
         <header className="mb-6 text-2xl font-bold text-inverted bg-tertiary py-4">
-          Categories
+          Exlpore
         </header>
         <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
           <Link
             to="/"
             className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
           >
-            <Travel className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">Travel</span>
+            <img
+              src={Explore}
+              alt="about"
+              className="w-full object-cover h-60 rounded-t-lg text-quaternary fill-current bg-slate-200"
+            />
+            <span className="text-base font-bold my-2">Exlpore with me</span>
           </Link>
           <Link
             to="/"
             className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
           >
-            <Print className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">Print</span>
-          </Link>
-          <Link
-            to="/"
-            className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
-          >
-            <Merchandise className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">
-              Merchandise (coming soon)
-            </span>
+            <img
+              alt="prints"
+              src={The_Last_Vulture}
+              className="w-full object-cover h-60 rounded-t-lg text-quaternary fill-current bg-slate-200"
+            />
+            <span className="text-base font-bold my-2">The last vulture</span>
           </Link>
         </div>
       </section>
@@ -71,22 +70,50 @@ const Home = (props: Props) => {
             to="/"
             className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
           >
+            <img
+              alt="Gallery"
+              src={Gallery}
+              className="w-full object-cover h-60 rounded-t-lg text-quaternary fill-current bg-slate-200"
+            />
+            <span className="text-base font-bold my-2">Gallery</span>
+          </Link>
+          <Link
+            to="/"
+            className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
+          >
+            <img
+              alt="prints"
+              src={Prints}
+              className="w-full object-cover h-60 rounded-t-lg text-quaternary fill-current bg-slate-200"
+            />
+            <span className="text-base font-bold my-2">Prints</span>
+          </Link>
+        </div>
+      </section>
+      <section className="pb-6 bg-secondary bg-opacity-5">
+        <header className="mb-6 text-2xl font-bold text-inverted bg-tertiary py-4">
+          About
+        </header>
+        <div className="p-4 grid md:grid-flow-col auto-cols-fr gap-8 md:gap-4">
+          <Link
+            to="/"
+            className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
+          >
             <Birds className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">Birds</span>
+            <span className="text-base font-bold my-2">
+              Merchandise(Coming soon)
+            </span>
           </Link>
           <Link
             to="/"
             className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
           >
-            <Landscape className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">Landscape</span>
-          </Link>
-          <Link
-            to="/"
-            className="border-2 border-inverted rounded-lg grid bg-inverted shadow-md hover:shadow-quaternary"
-          >
-            <Nightscape className="w-full h-60 rounded-t-lg text-quaternary fill-current bg-slate-200" />
-            <span className="text-base font-bold my-2">Nightscape</span>
+            <img
+              src={About}
+              alt="about"
+              className="w-full object-cover h-60 rounded-t-lg text-quaternary fill-current bg-slate-200"
+            />
+            <span className="text-base font-bold my-2">About me</span>
           </Link>
         </div>
       </section>
